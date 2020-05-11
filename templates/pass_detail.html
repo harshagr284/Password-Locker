@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+<h1 align='center'>DETAILS</h1>
+<div class="container">
+  <div class="jumbotron">
+<h2>Title:</h2>
+{{pass_detail.title}}
+<h2>Password:</h2>
+{{pass_detail.password}}
+<p></p>
+<p><a class='btn btn-warning' href="{% url 'update' pk=pass_detail.pk %}">Update</a></p>
+<p></p>
+<p><a class='btn btn-danger' href="{% url 'delete' pk=pass_detail.pk %}">Delete</a></p>
+</div>
+</div>
+{% endblock %}

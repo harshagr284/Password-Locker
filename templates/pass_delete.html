@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+<h3>Are You Sure Want To Delete {{object.title}}</h3>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" name="submit">Delete</button>
+</form>
+</div>
+</div>
+{% endblock %}
